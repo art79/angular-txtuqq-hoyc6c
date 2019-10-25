@@ -18,6 +18,8 @@ import { CartComponent } from './cart/cart.component';
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent  },
+      // Add routing (a URL pattern) for the cart component
+      { path: 'cart', component: CartComponent  },
     ])
   ],
   declarations: [
