@@ -1,15 +1,17 @@
-<h2>Products</h2>
-
-
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 -->
+
+<h2>Products</h2>
+<!-- Update the *ngFor directive to assign each index in the products array to the productId variable when iterating over the list. -->
 <div *ngFor="let product of products; index as productId">   
   <h3>
-    <!-- Property binding [ ] -->
-    <a [title]="product.name + ' details'">
+    <!-- Property binding [ ]  
+    The RouterLink directive gives the router control over the anchor element. In this case, the route (URL) contains one fixed segment (/products) and the final segment is variable, inserting the id property of the current product. For example, the URL for a product with an id of 1 will be similar to https://getting-started-myfork.stackblitz.io/products/1.
+    -->
+    <a [title]="product.name + ' details'" [routerLink]="['product', 'productId']">
       <!-- Interpolation {{ }} -->
       {{ product.name }}
     </a>
