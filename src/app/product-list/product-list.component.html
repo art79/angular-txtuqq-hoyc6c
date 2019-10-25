@@ -11,7 +11,7 @@ can be found in the LICENSE file at http://angular.io/license
     <!-- Property binding [ ]  
     The RouterLink directive gives the router control over the anchor element. In this case, the route (URL) contains one fixed segment (/products) and the final segment is variable, inserting the id property of the current product. For example, the URL for a product with an id of 1 will be similar to https://getting-started-myfork.stackblitz.io/products/1.
     -->
-    <a [title]="product.name + ' details'" [routerLink]="['product', 'productId']">
+    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
       <!-- Interpolation {{ }} -->
       {{ product.name }}
     </a>
