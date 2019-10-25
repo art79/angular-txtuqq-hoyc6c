@@ -14,6 +14,9 @@ export class ProductDetailsComponent implements OnInit {
   product;
   constructor(private route: ActivatedRoute) { }
 
+  // Angular calls ngOnInit() shortly after creating a component.
+  // The route parameters correspond to the path variables defined in the route. The productId is provided from the URL that was matched to the route. You use the productId to display the details for each unique product.
+  
   // 3. In the ngOnInit() method, subscribe to route params and fetch the product based on the productId.
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
