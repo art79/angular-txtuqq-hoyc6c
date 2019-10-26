@@ -31,4 +31,14 @@ export class CartComponent implements OnInit {
     });
   }
 
+  // For the checkout process, users need to be able to submit the form data (their name and address). When the order is submitted, the form should reset and the cart should clear.
+
+  // In cart.component.ts, define an onSubmit() method to process the form. Use the CartService#clearCart() method to empty the cart items and reset the form after it is submitted. (In a real-world app, this method also would submit the data to an external server.)
+  onSubmit(customerData) {
+    // Process checkout data here
+    console.warn('Your order has been submitted', customerData);
+
+    this.items = this.cartService.clearCart();
+    this.checkoutForm.reset();
+  }
 }
